@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11129.15" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2b3-8G-Ccb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11163.2" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="2b3-8G-Ccb">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11103.10"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11133"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -18,24 +19,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="蘇格拉底" translatesAutoresizingMaskIntoConstraints="NO" id="57W-ee-fC1">
-                                <frame key="frameInset" minX="96" minY="137" width="180" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="蘇格拉底" translatesAutoresizingMaskIntoConstraints="NO" id="57W-ee-fC1">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="S8w-IH-REG"/>
+                                    <constraint firstAttribute="width" constant="180" id="ZpT-Qt-etu"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="90"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HQ7-N9-NlD">
-                                <frame key="frameInset" minX="50" height="209" maxX="50" maxY="98"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HQ7-N9-NlD">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="qsU-2p-NmA"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="vEK-Ej-po3" kind="embed" id="Hgz-Xf-0xz"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HQ7-N9-NlD" firstAttribute="top" secondItem="57W-ee-fC1" secondAttribute="bottom" constant="43" id="6TR-ZF-r75"/>
+                            <constraint firstItem="Ein-C8-iYO" firstAttribute="top" secondItem="HQ7-N9-NlD" secondAttribute="bottom" constant="49" id="7ih-BW-Hu8"/>
+                            <constraint firstItem="57W-ee-fC1" firstAttribute="centerX" secondItem="v14-ee-EJX" secondAttribute="centerX" id="SJz-fC-JfB"/>
+                            <constraint firstItem="HQ7-N9-NlD" firstAttribute="centerX" secondItem="v14-ee-EJX" secondAttribute="centerX" id="egY-6y-T6u"/>
+                            <constraint firstItem="57W-ee-fC1" firstAttribute="top" secondItem="kBl-9H-9iB" secondAttribute="bottom" constant="40" id="gS9-Ia-5Te"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="WLQ-zY-GOG"/>
                 </viewController>
@@ -55,24 +66,34 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="孔子" translatesAutoresizingMaskIntoConstraints="NO" id="dSA-03-m6T">
-                                <frame key="frameInset" minX="96" minY="137" width="180" height="180"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="孔子" translatesAutoresizingMaskIntoConstraints="NO" id="dSA-03-m6T">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="180" id="KXb-JC-zaT"/>
+                                    <constraint firstAttribute="width" constant="180" id="STU-m1-D3F"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="90"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </imageView>
-                            <containerView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="as4-0z-z4r">
-                                <frame key="frameInset" minX="50" height="209" maxX="50" maxY="98"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="as4-0z-z4r">
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="275" id="3nL-jE-6xV"/>
+                                </constraints>
                                 <connections>
                                     <segue destination="K62-K1-pPr" kind="embed" id="683-Hp-Poy"/>
                                 </connections>
                             </containerView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="as4-0z-z4r" firstAttribute="top" secondItem="dSA-03-m6T" secondAttribute="bottom" constant="43" id="7qV-R2-TfS"/>
+                            <constraint firstItem="dSA-03-m6T" firstAttribute="centerX" secondItem="XEX-f3-iNf" secondAttribute="centerX" id="DbB-pJ-ygX"/>
+                            <constraint firstItem="Gt1-x7-CDu" firstAttribute="top" secondItem="as4-0z-z4r" secondAttribute="bottom" constant="49" id="XRk-ne-kGl"/>
+                            <constraint firstItem="as4-0z-z4r" firstAttribute="centerX" secondItem="XEX-f3-iNf" secondAttribute="centerX" id="hvl-Td-8YH"/>
+                            <constraint firstItem="dSA-03-m6T" firstAttribute="top" secondItem="Iif-Ps-jSH" secondAttribute="bottom" constant="40" id="j5k-kS-a96"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="pz3-g0-E0K"/>
                 </viewController>
@@ -85,7 +106,7 @@
             <objects>
                 <tableViewController id="K62-K1-pPr" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="JC5-uF-jCI">
-                        <rect key="frame" x="0.0" y="0.0" width="275" height="209"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="242"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="0.64690193969999998" colorSpace="calibratedRGB"/>
@@ -115,7 +136,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="3zU-mR-UDZ" kind="show" id="X6M-pE-z2X"/>
+                                            <segue destination="3zU-mR-UDZ" kind="show" id="CS4-c0-QFC"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="2Hp-L2-0cZ">
@@ -136,7 +157,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="vgz-IQ-a7a" kind="show" id="W3a-a1-uiC"/>
+                                            <segue destination="vgz-IQ-a7a" kind="show" id="XjO-IQ-gRh"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -161,32 +182,42 @@
                         <viewControllerLayoutGuide type="bottom" id="A74-aC-gXi"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="iH8-Ee-eCE">
-                        <rect key="frame" x="0.0" y="0.0" width="275" height="209"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="242"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroud" translatesAutoresizingMaskIntoConstraints="NO" id="riR-wr-ZUK">
                                 <frame key="frameInset" minX="-131" minY="28" width="1077" height="598"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」 " lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsf-ty-eJP">
-                                <frame key="frameInset" minX="16" minY="115" width="343" height="154"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子曰：「學而時習之，不亦說乎？有朋自遠方來，不亦樂乎？人不知而不慍，不亦君子乎？」 " lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dsf-ty-eJP">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="140" id="6WA-OM-jpW"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" 孔子說：「學習修養自己和福國利民的學問，又能夠適時地實行，豈不是很令人欣喜嗎？有志同道合的朋友從遠方來，豈不是很快樂嗎？當自己的道德學問有成就時，即使旁人不知道，心里也沒有絲毫怨恨，這不正是一個君子的風范嗎？」" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2oM-DH-f2b">
-                                <frame key="frameInset" minX="16" minY="295" width="343" height="300"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" editable="NO" text=" 孔子說：「學習修養自己和福國利民的學問，又能夠適時地實行，豈不是很令人欣喜嗎？有志同道合的朋友從遠方來，豈不是很快樂嗎？當自己的道德學問有成就時，即使旁人不知道，心里也沒有絲毫怨恨，這不正是一個君子的風范嗎？」" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="PWf-HO-YI7">
+                                <frame key="frameInset" minX="16" minY="196" width="243"/>
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Dsf-ty-eJP" firstAttribute="leading" secondItem="iH8-Ee-eCE" secondAttribute="leading" constant="16" id="2eU-zr-0ea"/>
+                            <constraint firstItem="PWf-HO-YI7" firstAttribute="leading" secondItem="iH8-Ee-eCE" secondAttribute="leadingMargin" id="UgW-4G-seY"/>
+                            <constraint firstItem="Dsf-ty-eJP" firstAttribute="leading" secondItem="iH8-Ee-eCE" secondAttribute="leadingMargin" id="ZuO-V5-yIr"/>
+                            <constraint firstAttribute="trailing" secondItem="Dsf-ty-eJP" secondAttribute="trailing" constant="16" id="aVN-H9-0NR"/>
+                            <constraint firstItem="Dsf-ty-eJP" firstAttribute="top" secondItem="H7x-kz-TQT" secondAttribute="bottom" constant="30" id="bV9-fC-4LP"/>
+                            <constraint firstItem="PWf-HO-YI7" firstAttribute="top" secondItem="Dsf-ty-eJP" secondAttribute="bottom" constant="26" id="gKG-eI-87M"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PWf-HO-YI7" secondAttribute="trailing" id="n6Q-5y-0by"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="PWf-HO-YI7" secondAttribute="bottom" constant="26" id="p9F-vL-iLu"/>
+                            <constraint firstItem="Dsf-ty-eJP" firstAttribute="trailing" secondItem="iH8-Ee-eCE" secondAttribute="trailingMargin" id="zVf-XZ-22K"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lvU-DA-CNp" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -239,32 +270,41 @@
                         <viewControllerLayoutGuide type="bottom" id="IKL-a1-qLT"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="xCa-fv-XC0">
-                        <rect key="frame" x="0.0" y="0.0" width="275" height="209"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="242"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="backgroud" translatesAutoresizingMaskIntoConstraints="NO" id="Wha-pm-vj5">
                                 <frame key="frameInset" minX="-131" minY="28" width="1077" height="598"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="子曰：「知者樂水，仁者樂山；知者動，仁者靜；知者樂，仁者壽。」 " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACa-kF-RCb">
-                                <frame key="frameInset" minX="16" minY="124" width="343" height="104"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="子曰：「知者樂水，仁者樂山；知者動，仁者靜；知者樂，仁者壽。」 " lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ACa-kF-RCb">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="105" id="Xdb-gs-aNZ"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text=" 孔子說：「智者喜愛水，仁者喜愛山；智者好動，仁者好靜； 智者快樂，仁者長壽。」" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="5" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cq0-cS-Pk4">
-                                <frame key="frameInset" minX="16" minY="293" width="343" height="185"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text=" 孔子說：「智者喜愛水，仁者喜愛山；智者好動，仁者好靜； 智者快樂，仁者長壽。」" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="bbX-Ek-e9B">
+                                <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="128" id="nEJ-He-7mI"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="25"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ACa-kF-RCb" firstAttribute="leading" secondItem="xCa-fv-XC0" secondAttribute="leading" constant="16" id="3VZ-st-VDS"/>
+                            <constraint firstAttribute="trailing" secondItem="ACa-kF-RCb" secondAttribute="trailing" constant="16" id="avn-w4-WYc"/>
+                            <constraint firstItem="bbX-Ek-e9B" firstAttribute="top" secondItem="ACa-kF-RCb" secondAttribute="bottom" constant="27" id="bV6-6w-PDa"/>
+                            <constraint firstItem="ACa-kF-RCb" firstAttribute="top" secondItem="Oxc-AR-njW" secondAttribute="bottom" constant="30" id="dlW-1O-5Ub"/>
+                            <constraint firstItem="bbX-Ek-e9B" firstAttribute="leading" secondItem="xCa-fv-XC0" secondAttribute="leadingMargin" id="gLs-Lh-tH2"/>
+                            <constraint firstItem="bbX-Ek-e9B" firstAttribute="trailing" secondItem="xCa-fv-XC0" secondAttribute="trailingMargin" id="gtH-e3-Vxc"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xbV-4c-whg" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -295,7 +335,7 @@
             <objects>
                 <tableViewController id="vEK-Ej-po3" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="e6h-eU-5N4">
-                        <rect key="frame" x="0.0" y="0.0" width="275" height="209"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="242"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <color key="sectionIndexBackgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="0.64690193969999998" colorSpace="calibratedRGB"/>
@@ -325,7 +365,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="a5e-tJ-Bdc" kind="show" id="UOd-lY-yZg"/>
+                                            <segue destination="a5e-tJ-Bdc" kind="show" id="Y4N-3T-n2P"/>
                                         </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" id="cgT-9m-7am">
@@ -346,7 +386,7 @@
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
-                                            <segue destination="XXu-io-KUW" kind="show" id="zYr-T1-Cxb"/>
+                                            <segue destination="XXu-io-KUW" kind="show" id="Tli-vV-skJ"/>
                                         </connections>
                                     </tableViewCell>
                                 </cells>
@@ -371,24 +411,23 @@
                         <viewControllerLayoutGuide type="bottom" id="4S0-eo-IEd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="e1N-8U-67W">
-                        <rect key="frame" x="0.0" y="0.0" width="275" height="209"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="242"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="蘇格拉底：「世界上最快樂的事，莫過於為理想而奮鬥。哲學家告訴我們，“為善至樂”的樂，乃是從道德中產生出來的，為理想而奮鬥的人，必能獲得這種快樂，因為理想的本質就含有道德的價值。」" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg0-sC-MFM">
-                                <frame key="frameInset" minX="16" minY="82" width="343" height="329"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蘇格拉底：「世界上最快樂的事，莫過於為理想而奮鬥。哲學家告訴我們，“為善至樂”的樂，乃是從道德中產生出來的，為理想而奮鬥的人，必能獲得這種快樂，因為理想的本質就含有道德的價值。」" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zg0-sC-MFM">
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="FW1-PN-7PY">
-                                <frame key="frameInset" minX="16" minY="411" width="343" height="193"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Zg0-sC-MFM" firstAttribute="leading" secondItem="e1N-8U-67W" secondAttribute="leadingMargin" id="J8n-Im-Nfa"/>
+                            <constraint firstItem="Zg0-sC-MFM" firstAttribute="trailing" secondItem="e1N-8U-67W" secondAttribute="trailingMargin" id="Uew-zm-MrG"/>
+                            <constraint firstItem="Zg0-sC-MFM" firstAttribute="top" secondItem="iQ2-GO-4fR" secondAttribute="bottom" constant="30" id="gN2-Zd-18M"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EMj-m4-ceB" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -404,24 +443,26 @@
                         <viewControllerLayoutGuide type="bottom" id="5uQ-KI-rvP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="h1u-ju-XzT">
-                        <rect key="frame" x="0.0" y="0.0" width="275" height="209"/>
+                        <rect key="frame" x="0.0" y="0.0" width="275" height="242"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="蘇格拉底：「真正高明的人，就是能夠借重別人的智慧，來使自己不受蒙蔽的人。」" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZo-Wz-AmU">
-                                <frame key="frameInset" minX="16" minY="82" width="343" height="202"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="蘇格拉底：「真正高明的人，就是能夠借重別人的智慧，來使自己不受蒙蔽的人。」" lineBreakMode="tailTruncation" numberOfLines="10" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZZo-Wz-AmU">
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="202" id="87z-aR-4v5"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="29"/>
                                 <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <size key="shadowOffset" width="1" height="1"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Image" translatesAutoresizingMaskIntoConstraints="NO" id="qxV-pE-xIf">
-                                <frame key="frameInset" minX="16" minY="411" width="343" height="193"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ZZo-Wz-AmU" firstAttribute="top" secondItem="mpT-rZ-CxV" secondAttribute="bottom" constant="30" id="Ssn-sl-pcu"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZZo-Wz-AmU" secondAttribute="trailing" id="o9D-QB-PQC"/>
+                            <constraint firstItem="ZZo-Wz-AmU" firstAttribute="leading" secondItem="h1u-ju-XzT" secondAttribute="leadingMargin" id="ux8-Sq-IyC"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2TA-mE-r38" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -430,7 +471,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="Image" width="600" height="366"/>
         <image name="backgroud" width="1024" height="768"/>
         <image name="tab1" width="32" height="32"/>
         <image name="tab2" width="32" height="32"/>
